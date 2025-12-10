@@ -14,18 +14,19 @@ macska = {
     "kor": macska_kora
 }
 
-print(macska_nev["nev"])
-print(macska_kora["kor"])
+print(macska["nev"])
+print(macska["kor"])
 
 
 
 valtoztatas = input("Melyik adatot akarod változtatni?(nev/kor): ")
-if "kor" in input:
+if valtoztatas == "kor":
     macska["kor"] = int(input("Add meg a macskád megváltozott korát!: "))
-elif "nev" in input:
+elif valtoztatas == "nev":
     macska["nev"] = input("Add meg a macska megváltozott nevét!: ")
 
-
+for kulcs, ertek in macska.items():
+    print(f"{kulcs}: {ertek}")
 
 
 
